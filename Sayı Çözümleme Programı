@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+void main()
+{
+	int a;//cozumlenecek sayi
+	printf("Cozumlenecek sayi= ");
+	scanf("%d",&a);printf("\n");
+	printf("Girilen sayi %d",a);//cozumlenecek sayiyi yazdiriyor
+	printf("\n\n");
+	int birlik=(((a%1000)%100)%10);//birlik sayiyi mod kullanarak bulan islem
+	int onluk=(((a%1000)%100)-birlik)/10;//onluk sayiyi mod kullanarak bulan islem
+	int yuzluk=((a%1000)-(10*onluk+birlik))/100;//yuzluk sayiyi mod kullanarak bulan islem
+	int binlik=(a-(a%1000))/1000;//binlik sayiyi mod kullanarak bulan islem
+	printf("%d tane binlik sayi\n",binlik);
+	printf("%d tane yuzluk sayi\n",yuzluk);
+	printf("%d tane onluk sayi\n",onluk);
+	printf("%d tane birlik sayi vardir\n",birlik);
+	getch();
+}
